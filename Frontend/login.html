@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Andev Web | Login & Signup</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+<!-- BACKGROUND VIDEO -->
+<video autoplay muted loop playsinline class="bg-video">
+  <source src="video/mp4.mp4" type="video/mp4">
+  Your browser does not support video.
+</video>
+
+<!-- DARK OVERLAY (for readability) -->
+<div class="overlay"></div>
+
+<section class="container">
+  <div class="login-container">
+    <div class="form-container" id="formBox">
+
+      <h1 id="formTitle">Login</h1>
+
+      <form onsubmit="return handleSubmit()">
+
+        <!-- USERNAME -->
+        <input type="text" id="username" placeholder="Username" required>
+
+        <!-- EMAIL (SIGNUP ONLY) -->
+        <input type="email" id="email" placeholder="Email address" style="display:none;">
+
+        <!-- PASSWORD -->
+        <input type="password" id="password" placeholder="Password" required>
+
+        <!-- CONFIRM PASSWORD (SIGNUP ONLY) -->
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" style="display:none;">
+
+        <!-- ROLE DROPDOWN -->
+        <label class="dropdown-label">Continue as</label>
+        <select id="role" required>
+          <option value="" disabled selected>Select role</option>
+          <option value="parent">Parent</option>
+          <option value="therapist">Therapist</option>
+        </select>
+
+        <!-- SUBMIT -->
+        <button type="submit" class="submit-btn" id="submitBtn">
+          Login
+        </button>
+      </form>
+
+      <div class="switch-text">
+        <a href="#" onclick="toggleForm()">Switch to Signup</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
